@@ -10,22 +10,13 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { useTheme } from "next-themes";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
-  const { resolvedTheme } = useTheme();
-  const kuolioBg =
-    resolvedTheme === "dark"
-      ? "linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%)"
-      : "linear-gradient(to bottom, rgba(213, 213, 213, 1) 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%)";
   return (
     <>
-      <div
-        className="fixed top-0 left-0 z-50 w-full py-2 rounded-b-xl select-none"
-        style={{ background: kuolioBg }}
-      >
+      <div className="fixed top-0 left-0 z-50 w-full py-2 rounded-b-xl select-none bg-kuolio-light dark:bg-kuolio-dark">
         <div className="flex justify-center items-center w-full">
           <button
             type="button"

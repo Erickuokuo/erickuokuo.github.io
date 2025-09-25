@@ -85,6 +85,12 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "kuolio-light":
+          "linear-gradient(to bottom, rgba(213,213,213,1) 0%, rgba(255,255,255,0) 90%, rgba(255,255,255,0) 100%)",
+        "kuolio-dark":
+          "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 90%, rgba(255,255,255,0) 100%)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
