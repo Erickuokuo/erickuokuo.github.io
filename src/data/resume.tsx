@@ -9,8 +9,10 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/seattle",
   description:
     "Aspiring Software Engineer & Data Scientist. I love building things and helping people.",
+  current:
+    "Currently building webpages at Destinate, previously at XRSPACE & Dell",
   summary:
-    "I’m Eric Kuo, a Master's student at the University of Washington studying Information Management: Data Science. As a goal-driven Software Engineer with a strong passion for Design and Project Management, I’m always seeking opportunities to work on high-impact technologies that drive sustainable innovation and empower communities. I'm excited about leveraging generative AI and data-driven design to build accessible, sustainable solutions that empower users and optimize complex workflows. I’m actively looking for new opportunities where I can contribute my creativity, technical expertise, and leadership skills while learning from others. Feel free to connect with me at erickuo0210@gmail.com!",
+    "I’m Eric Kuo, a Master's student at the University of Washington studying Information Management: Data Science. As a goal-driven Software Engineer with a strong passion for Design and Project Management, I’m always seeking opportunities to work on high-impact technologies that drive sustainable innovation and empower communities. I'm excited about leveraging generative AI and data-driven design to build accessible, sustainable solutions that empower users and optimize complex workflows. I’m actively looking for new opportunities where I can contribute my creativity, technical expertise, and leadership skills while learning from others. Feel free to connect with me at [erickuo0210@gmail.com](mailto:erickuo0210@gmail.com)!",
   avatarUrl: "/me.png",
   skills: [
     "Python",

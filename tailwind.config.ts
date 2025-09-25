@@ -22,7 +22,16 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      fontSize: {
+        "1.5xl": "1.375rem", // 22px
+        "2.5xl": "1.75rem", // 28px
+        "3.5xl": "2.125rem", // 34px
+        "4.5xl": "2.625rem", // 42px
+        "5.5xl": "3.25rem", // 52px
+        "6.5xl": "4.125rem", // 66px
+      },
       colors: {
+        highlight: "#403d39",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
