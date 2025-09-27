@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     title: `${DATA.name}`,
     description: DATA.description,
     url: DATA.url,
+    images: ["/cover.png"],
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
