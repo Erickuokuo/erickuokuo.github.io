@@ -262,7 +262,7 @@ export default function Page() {
                   </Link>{" "}
                   or scheduling a time to talk through{" "}
                   <Link
-                    href={DATA.contact.social.schedulingUrl}
+                    href={DATA.contact.schedulingUrl}
                     className="text-blue-500 hover:underline"
                   >
                     Calendly

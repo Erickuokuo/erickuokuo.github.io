@@ -61,6 +61,7 @@ export const DATA = {
   contact: {
     email: "erickuo0210@gmail.com",
     tel: "+1 (206) 602-9393",
+    schedulingUrl: "https://calendly.com/ericallenkuo/30min",
     social: {
       GitHub: {
         name: "GitHub",
@@ -76,7 +77,6 @@ export const DATA = {
 
         navbar: true,
       },
-      schedulingUrl: "https://calendly.com/ericallenkuo/30min",
       instagram: {
         name: "instagram",
         url: "https://www.instagram.com/equal0210",
