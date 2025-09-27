@@ -14,6 +14,7 @@ interface ResumeCardProps {
   altText: string;
   title: string;
   subtitle?: string;
+  toggle?: boolean;
   href?: string;
   badges?: readonly string[];
   period: string;
@@ -26,6 +27,7 @@ export const ResumeCard = ({
   subtitle,
   href,
   badges,
+  toggle,
   period,
   description,
 }: ResumeCardProps) => {
@@ -73,12 +75,15 @@ export const ResumeCard = ({
                     ))}
                   </span>
                 )}
-                <ChevronRightIcon
-                  className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />
+
+                {toggle && (
+                  <ChevronRightIcon
+                    className={cn(
+                      "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                      isExpanded ? "rotate-90" : "rotate-0"
+                    )}
+                  />
+                )}
               </h3>
               <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
                 {period}

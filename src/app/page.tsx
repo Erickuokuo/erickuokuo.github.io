@@ -65,8 +65,9 @@ export default function Page() {
         </section>
         <section id="current">
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <h2 className="text-base text-highlight font-bold text-center">
-              {DATA.current}
+            <h2 className="text-base text-highlight text-center">
+              {DATA.current}{" "}
+              <span className="font-extrabold">{DATA.company}</span> {DATA.past}
             </h2>
           </BlurFade>
         </section>
@@ -93,6 +94,7 @@ export default function Page() {
                 <ResumeCard
                   key={work.company}
                   logoUrl={work.logoUrl}
+                  toggle={true}
                   altText={work.company}
                   title={work.company}
                   subtitle={work.title}
@@ -119,6 +121,7 @@ export default function Page() {
                   key={education.school}
                   href={education.href}
                   logoUrl={education.logoUrl}
+                  toggle={false}
                   altText={education.school}
                   title={education.school}
                   subtitle={education.degree}
@@ -165,7 +168,7 @@ export default function Page() {
                     My Projects
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                    Check out my latest work
+                    Check out my recent work
                   </h2>
                   <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     I&apos;ve worked on a variety of projects, from simple
@@ -197,31 +200,30 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section id="hackathons">
+        <section id="leadership">
           <div className="space-y-12 w-full py-12">
             <BlurFade delay={BLUR_FADE_DELAY * 13}>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
                   <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                    Hackathons
+                    Leadership
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                    I like building things
+                    Leading through creation
                   </h2>
                   <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    During my time in university, I attended{" "}
-                    {DATA.hackathons.length}+ hackathons. People from around the
-                    country would come together and build incredible things in
-                    2-3 days. It was eye-opening to see the endless
-                    possibilities brought to life by a group of motivated and
-                    passionate individuals.
+                    From organizing events to launching new initiatives, I
+                    learned how to bring people together around a shared vision.
+                    These experiences taught me that effective leadership means
+                    empowering others, creating structure, and turning
+                    collective energy into meaningful outcomes.
                   </p>
                 </div>
               </div>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 14}>
               <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-                {DATA.hackathons.map((project, id) => (
+                {DATA.leadership.map((project, id) => (
                   <BlurFade
                     key={project.title + project.dates}
                     delay={BLUR_FADE_DELAY * 15 + id * 0.05}
@@ -251,15 +253,21 @@ export default function Page() {
                   Get in Touch
                 </h2>
                 <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Want to chat? Just shoot me a dm{" "}
+                  Want to chat? Just shoot me a dm on{" "}
                   <Link
-                    href={DATA.contact.social.X.url}
+                    href={DATA.contact.social.LinkedIn.url}
                     className="text-blue-500 hover:underline"
                   >
-                    with a direct question on twitter
+                    Linkedin
                   </Link>{" "}
-                  and I&apos;ll respond whenever I can. I will ignore all
-                  soliciting.
+                  or scheduling a time to talk through{" "}
+                  <Link
+                    href={DATA.contact.social.schedulingUrl}
+                    className="text-blue-500 hover:underline"
+                  >
+                    Calendly
+                  </Link>{" "}
+                  and I&apos;ll respond when I can.
                 </p>
               </div>
             </BlurFade>
