@@ -15,8 +15,29 @@ export default async function BlogPage() {
   return (
     <section>
       <BlurFade delay={BLUR_FADE_DELAY}>
-        <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
+        <h1 className="font-medium text-2xl mb-8 tracking-tighter">
+          My Stories & Yaps 🦑
+        </h1>
       </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 3}>
+        <Link
+          href="https://open.spotify.com/playlist/2oTT0Jrae4Ai9TLmghAeVZ?si=6986cdc06156418c"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-6 mt-10 mb-10 p-4 rounded-lg border hover:bg-accent transition"
+        >
+          <img
+            src="/spotify-cover.png"
+            alt="Spotify Playlist"
+            className="w-16 h-16 rounded"
+          />
+          <div className="flex flex-col gap-2">
+            <p className="font-medium tracking-tight">Now Vibing 🎧</p>
+            <p className="text-xs text-muted-foreground">My Spotify Picks</p>
+          </div>
+        </Link>
+      </BlurFade>
+
       {posts
         .sort((a, b) => {
           if (

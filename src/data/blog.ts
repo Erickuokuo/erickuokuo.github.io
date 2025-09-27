@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
+import remarkMdx from "remark-mdx";
 
 type Metadata = {
   title: string;
@@ -21,11 +22,11 @@ function getMDXFiles(dir: string) {
 
 export async function markdownToHTML(markdown: string) {
   const p = await unified()
-    .use(remarkParse)
+    .use(remarkParse) // base markdown
+    .use(remarkMdx) // enable MDX (imports + JSX)
     .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypePrettyCode, {
-      // https://rehype-pretty.pages.dev/#usage
       theme: {
         light: "min-light",
         dark: "min-dark",
@@ -37,7 +38,6 @@ export async function markdownToHTML(markdown: string) {
 
   return p.toString();
 }
-
 export async function getPost(slug: string) {
   const filePath = path.join("content", `${slug}.mdx`);
   let source = fs.readFileSync(filePath, "utf-8");
@@ -61,7 +61,7 @@ async function getAllPosts(dir: string) {
         slug,
         source,
       };
-    }),
+    })
   );
 }
 
