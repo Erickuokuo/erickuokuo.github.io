@@ -1,18 +1,13 @@
 // next.config.mjs
 import createMDX from "@next/mdx";
 
+const withMDX = require("@next/mdx")();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  images: { unoptimized: true },
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  // Configure `pageExtensions`` to include MDX files
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  // Optionally, add any other Next.js config below
 };
 
-const withMDX = createMDX({
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
-});
-
-export default withMDX(nextConfig);
+module.exports = withMDX(nextConfig);

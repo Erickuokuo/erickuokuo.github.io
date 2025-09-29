@@ -13,7 +13,7 @@ interface ImageScrollerProps {
   images: Image[];
 }
 
-export function ImageScroller({ images }: ImageScrollerProps) {
+export default function ImageScroller({ images }: ImageScrollerProps) {
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
   return (
