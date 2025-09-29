@@ -4,10 +4,10 @@ import createMDX from "@next/mdx";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  images: {
-    unoptimized: true,
-  },
+  images: { unoptimized: true },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  basePath: "/erickuokuo.github.io", // repo name
+  assetPrefix: "/erickuokuo.github.io/",
 };
 
 const withMDX = createMDX({
