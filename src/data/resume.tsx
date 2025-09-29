@@ -9,8 +9,8 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/seattle",
   description:
     "Aspiring Software Engineer & Data Scientist. I love building things and helping people.",
-  current: "Currently a Front-End Engineer @ ",
-  company: "Destinate",
+  current: "Currently a Full Stack Engineer @ ",
+  company: "Shopback & Destinate",
   past: "(previously at XRSPACE & Dell)",
   summary:
     "I’m Eric Kuo, a Master's student at the University of Washington studying Information Management: Data Science. As a goal-driven Software Engineer with a strong passion for Design and Project Management, I’m always seeking opportunities to work on high-impact technologies that drive sustainable innovation and empower communities. I'm excited about leveraging generative AI and data-driven design to build accessible, sustainable solutions that empower users and optimize complex workflows. Feel free to connect with me at [erickuo0210@gmail.com](mailto:erickuo0210@gmail.com)!",
@@ -107,6 +107,18 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "ShopBack",
+      href: "https://shopback.com",
+      badges: [],
+      location: "Taipei, Taiwan",
+      title: "Fullstack Software Engineer",
+      logoUrl: "/shopback.png",
+      start: "September 2025",
+      end: "Present",
+      description:
+        "Supported product quality initiatives by designing and executing manual and automated test cases across staging and production environments, ensuring feature stability and release readiness. Built and maintained CI/CD-integrated test automation scripts in Python and JavaScript, leveraging QA tools to track, reproduce, and resolve bugs in collaboration with engineering and product teams. Contributed to end-to-end quality processes—including regression testing, debugging, and test data preparation—while rapidly learning modern frameworks and applying AI-powered tools to improve testing efficiency and developer productivity.",
+    },
     {
       company: "Destinate Inc",
       href: "https://destinate.com",
