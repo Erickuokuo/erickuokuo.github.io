@@ -1,6 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { getBlogPosts } from "@/data/blog";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Blog",
@@ -26,10 +27,13 @@ export default async function BlogPage() {
           rel="noopener noreferrer"
           className="flex items-center space-x-6 mt-10 mb-10 p-4 rounded-lg border hover:bg-accent transition"
         >
-          <img
+          <Image
             src="/spotify-cover.png"
             alt="Spotify Playlist"
-            className="w-16 h-16 rounded"
+            width={64}
+            height={64}
+            className="rounded"
+            unoptimized // required for static export (output: "export")
           />
           <div className="flex flex-col gap-2">
             <p className="font-medium tracking-tight">Now Vibing 🎧</p>

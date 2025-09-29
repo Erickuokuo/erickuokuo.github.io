@@ -1,6 +1,6 @@
 // components/ImageScroller.tsx
 "use client";
-
+import Image from "next/image";
 import * as React from "react";
 import { motion } from "framer-motion";
 
@@ -29,11 +29,16 @@ export function ImageScroller({ images }: ImageScrollerProps) {
             className="flex-shrink-0 w-64 h-40 sm:w-80 sm:h-52 rounded-2xl overflow-hidden shadow-md bg-muted"
             whileHover={{ scale: 1.05 }}
           >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-full object-cover"
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+                unoptimized
+              />
+            </div>
           </motion.div>
         ))}
       </motion.div>
